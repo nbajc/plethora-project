@@ -6,18 +6,18 @@ import plethora.core.*;
 
 
 //1 declare plethora camara
-Ple_Camara pCam;
+Ple_Camera pCam;
 
 void setup(){
   size(800,600, OPENGL);
   
   //2 initialize plethora camara (this, x,y,z,    x,y,z);
-  pCam = new Ple_Camara(this, 500,500,500    ,0,0,0);
+  pCam = new Ple_Camera(this,   500,500,0,        0,0,0);
 }
 
 
 void draw(){
-  background(0);
+  background(235);
   
   //3 update camara Position
   pCam.update();
@@ -26,6 +26,6 @@ void draw(){
   
   
   noFill();
-  stroke(255);
+  stroke(0);
   box(600);
 }
